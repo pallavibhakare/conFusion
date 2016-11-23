@@ -6,11 +6,13 @@
 <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=egde">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="css/mystyles.css" rel="stylesheet">
-	<link href="css/font-awesome.min.css" rel="stylesheet">
+	
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">    
+	<link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    
     <link href="css/bootstrap-social.css" rel="stylesheet">
+    <link href="css/mystyles.css" rel="stylesheet">	    
     <title>Ristorante Con Fusion</title>
 	
 </head>
@@ -52,7 +54,7 @@
                         <li><a href="contactus.html"><i class="fa fa-envelope-o"></i> Contact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a data-toggle="modal" data-target="#loginModal">
+                        <li><a id="loginBtn">
                         <span class="glyphicon glyphicon-log-in"></span> Login</a>
                         </li>
                     </ul>
@@ -109,7 +111,7 @@
 					<p style="padding:20px;"></p>
 					<p style="padding:20px; "></p>
                     
-                    <button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#reserveform">
+                    <button type="button" class="btn btn-warning btn-block" id="reserveBtn">
   Reserve Table
 </button>					                    
                 </div>
@@ -355,9 +357,10 @@
     </footer>
 
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script scr="js/bootstrap.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
 <script>
     $(document).ready(function() { 
         $("#mycarousel").carousel(function(){
@@ -372,5 +375,13 @@
         });
         
     });
-</script>>
+</script>    
+<script>
+    $("#loginBtn").click(function(){
+        $("#loginModal").modal();
+    });
+     $("#reserveBtn").click(function(){
+        $("#reserveform").modal();
+    });
+</script>
 </body></html>

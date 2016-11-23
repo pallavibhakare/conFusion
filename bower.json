@@ -1,0 +1,21 @@
+{
+  "name": "conFusion",
+  "authors": [
+    "Pallavi Bhakare <pallavibhakare19@gmail.com>"
+  ],
+  "description": "Website for an awesome restaurant",
+  "main": "index.html",
+  "keywords": [
+    "conFusion",
+    "Restaurant"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
